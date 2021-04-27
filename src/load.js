@@ -11,3 +11,5 @@ function loadScript(src, callback) {
 loadScript("src/main.js", () => {
     console.log("Script loaded");
 });
+
+console.log("Built with webpack");

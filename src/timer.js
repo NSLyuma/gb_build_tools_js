@@ -1,4 +1,5 @@
 import { zeroFirstFormat, formatError } from "./common.js";
+import soundfile from "./media/sound.mp3";
 
 const timeInput = document.getElementById("time");
 const startBtn = document.getElementById("start");
@@ -24,7 +25,7 @@ function startTimer() {
 
             if (time < 0) {
                 clearInterval(timer);
-                let sound = new Audio("./media/sound.mp3");
+                let sound = new Audio(soundfile);
                 sound.play();
                 stopSoundBtn.addEventListener("click", () => {
                     sound.pause();
